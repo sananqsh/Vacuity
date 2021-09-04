@@ -11,21 +11,34 @@ def without(word, idx):
 def swap(word):
 	if len(word) == 0:
 		return word
+
+def encrypt(word):
+	rec = 0
+	print(rec)	#dbg
+
+	if len(word) <= 2:
+		return word;
+
+	mid_idx = middle_idx(word)
+	mid_char = middle_char(plain)		
 	
-	# x = word - word[i]
+	word = mid_char + encrypt(word[0:mid_idx]) + encrypt(word[mid_idx+1:len(word)])
+
 
 while True:
 	plain = input("Enter a word to have it ciphered: ")
 	print(plain)
 
-	# midchar = middle_char(plain)
-	# print(midchar)
+	# mid_char = middle_char(plain)
+	# print(mid_char)
 
 	# x = without(plain, middle_idx(plain))
 	# print(x)
 
-	y = middle_char(plain) + without(plain, middle_idx(plain))
-	print(y)
+	# y = middle_char(plain) + without(plain, middle_idx(plain))
+	# print(y)
 
 	# plain = swap(plain)
 	# print(plain)
+
+	print(encrypt(plain))
