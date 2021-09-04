@@ -13,8 +13,7 @@ def swap(word):
 		return word
 
 def encrypt(word):
-	rec = 0
-	print(rec)	#dbg
+	print(word)	#dbg
 
 	if len(word) <= 2:
 		return word;
@@ -29,16 +28,6 @@ while True:
 	plain = input("Enter a word to have it ciphered: ")
 	print(plain)
 
-	# mid_char = middle_char(plain)
-	# print(mid_char)
-
-	# x = without(plain, middle_idx(plain))
-	# print(x)
-
-	# y = middle_char(plain) + without(plain, middle_idx(plain))
-	# print(y)
-
-	# plain = swap(plain)
-	# print(plain)
+	# while 
 
 	print(encrypt(plain))
